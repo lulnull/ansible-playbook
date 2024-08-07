@@ -1,1 +1,13 @@
 ---
+- hosts: localhost
+  connection: local
+  become: true
+
+  tasks:
+  - name: Install applications
+    package:
+      name:
+        - htop
+        - tmux
+        - vorta
+        - vim-nox
